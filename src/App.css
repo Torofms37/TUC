@@ -29,7 +29,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 
 .app::before {
@@ -86,15 +86,41 @@ body {
 .bgPrimary {
   background-color: var(--quaternary);
   position: fixed;
-  filter: none;
   z-index: 1;
   color: var(--terciary);
   font-size: .9lh;
   text-align: center;
-  height: auto;
   padding: 2px;
 }
 
 .btn-a:hover {
   cursor: pointer;
+  color: var(--primary);
+}
+
+.btn-info {
+  width: 70%;
+  height: 40px;
+  margin: 10px;
+  background-color: var(--secondary);
+  border-radius: 15px;
+  font-size: .7lh;
+  font-weight: 700;
+}
+
+.btn-info:hover {
+  background-color: var(--primary);
+  transition: 0.15s;
+}
+
+.home {
+  margin: 15px;
+}
+
+.ladCon {
+  padding: 10px;
+  background-color: rgba(234, 224, 213, 0.7);
+  backdrop-filter: blur(1px);        
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;                       
 }
