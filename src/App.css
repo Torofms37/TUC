@@ -1,5 +1,100 @@
 @import "tailwindcss";
 
+:root {
+  --primary: #6f4e37;
+  --secondary: #c19a6b;
+  --terciary: #3b2f2f;
+  --quaternary:#eae0d5;
+  --warning: #a40404;
+  --warning-d: #920404;
+  --alert: #4A773C;
+  --alert-d: #3e6433;
+  --img: url('./assets/img/home.jpg');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.app::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+.modal-global {
+  background: var(--quaternary);
+  color: var(--terciary);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  z-index: 10;
+  border: 1px solid #ccc;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
 .warning {
-  background-color: #a40404;
+  background-color: var(--warning);
+  color: var(--quaternary);
+  width: 35px;
+  border-radius: 5px;
+  font-size: 0.9lh;
+  cursor: pointer;
+}
+.warning:hover {
+  background-color: var(--warning-d);
+}
+
+.alert {
+  background-color: var(--alert);
+  color: var(--quaternary);
+  width: 35px;
+  border-radius: 5px;
+  font-size: 0.9lh;
+  cursor: pointer;
+}
+.alert:hover {
+  background-color: var(--alert-d);
+}
+
+.bgPrimary {
+  background-color: var(--quaternary);
+  position: fixed;
+  filter: none;
+  z-index: 1;
+  color: var(--terciary);
+  font-size: .9lh;
+  text-align: center;
+  height: auto;
+  padding: 2px;
+}
+
+.btn-a:hover {
+  cursor: pointer;
 }
